@@ -9,13 +9,13 @@
             "value": "DevTeam1Vault"
         },
         "DevTestLabRepo": {
-            "value": "https://github.com/contoso48/DevTestLab48.git"
+            "value": "https://github.com/contoso48/AzureDemo.git"
         },
         "ArtifactsfolderPath": {
-            "value": "/DevTestLab48/DevTestLab1/Artifacts"
+            "value": "/DevTestLabsDemo/DevTestLab1/Artifacts"
         },
         "ArmTemplatefolderPath": {
-            "value": "/DevTestLab48/DevTestLab1/ArmTemplates"
+            "value": "/DevTestLabsDemo/DevTestLab1/ArmTemplates"
         },
         "VNETaddressspace": {
             "value": "10.19.0.0/24"
