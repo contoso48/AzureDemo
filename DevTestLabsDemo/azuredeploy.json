@@ -11,7 +11,7 @@
             "type": "String"
         },
         "DevTestLabRepo": {
-            "defaultValue": "https://github.com/contoso48/DevTestLab48/DevTestLab1",
+            "defaultValue": "https://github.com/contoso48/AzureDemo/tree/main/DevTestLabsDemo",
             "type": "String",
             "metadata": {
                 "description": "Url des externen Repos für dieses DTL"
