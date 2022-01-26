@@ -11,7 +11,7 @@
             "type": "String"
         },
         "DevTestLabRepo": {
-            "defaultValue": "https://github.com/contoso48/AzureDemo/tree/main/DevTestLabsDemo",
+            "defaultValue": "https://github.com/contoso48/DevTestLab48/DevTestLab1",
             "type": "String",
             "metadata": {
                 "description": "Url des externen Repos für dieses DTL"
@@ -80,6 +80,18 @@
             "metadata": {
                 "description": "Github Personal Access Token"
             }
+        },
+        "TenantId": {
+            "type": "string",
+            "metadata": {
+                "description": "Azure AD Tenant ID"
+            }
+        },
+       "UserObjectId": {
+            "type": "string",
+            "metadata": {
+                "description": "Azure AD User Object ID to assign to Keyvault Access Policy"
+            }
         }
     },
         "variables": {
@@ -128,9 +140,7 @@
                 "mandatoryArtifactsResourceIdsLinux": [
                 ],
                 "mandatoryArtifactsResourceIdsWindows": [
-                    "[concat(resourceId('microsoft.devtestlab/labs/artifactsources', 'teamblack', 'privaterepo'), '/artifacts/Windows-7ZIP')]"
                 ],
-                
                 "premiumDataDisks": "",
                 "environmentPermission": "",
                 "announcement": {
@@ -197,7 +207,7 @@
                     ],
                     "properties": {
                         "description": "DatScienceVM1",
-                        "author": "hemotzku@microsoft.com",
+                        "author": "demouser1@contoso48.onmicrosoft.com",
                         "osType": "Windows",
                         "formulaContent": {
                             "properties": {
@@ -388,11 +398,11 @@
                     "family": "A",
                     "name": "Standard"
                 },
-                "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+                "tenantId": "[parameters('TenantId')]",
                 "accessPolicies": [
                     {
-                        "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
-                        "objectId": "27790a78-69b8-4542-94e9-38d71df9a5f9",
+                        "tenantId": "[parameters('TenantId')]",
+                        "objectId": "[parameters('UserObjectId')]",
                         "permissions": {
                             "keys": [],
                             "secrets": [
@@ -408,8 +418,8 @@
                         }
                     },
                     {
-                        "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
-                        "objectId": "49c9b64d-6d4c-4da0-a501-a0d701e1fdf4",
+                        "tenantId": "[parameters('TenantId')]",
+                        "objectId": "[parameters('UserObjectId')]",
                         "permissions": {
                             "keys": [
                                 "Get",
