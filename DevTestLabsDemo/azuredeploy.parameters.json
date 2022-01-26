@@ -1,0 +1,31 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "name": {
+            "value": "DevTeam1"
+        },
+        "vaultname": {
+            "value": "DevTeam1Vault"
+        },
+        "DevTestLabRepo": {
+            "value": "https://github.com/contoso48/DevTestLab48.git"
+        },
+        "ArtifactsfolderPath": {
+            "value": "/DevTestLab48/DevTestLab1/Artifacts"
+        },
+        "ArmTemplatefolderPath": {
+            "value": "/DevTestLab48/DevTestLab1/ArmTemplates"
+        },
+        "VNETaddressspace": {
+            "value": "10.19.0.0/24"
+        },
+        "Subnetaddressspace": {
+            "value": "10.19.0.0/25"
+        },
+        "pat": {
+            "value": ""
+        }
+      
+    }
+  }
